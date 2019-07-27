@@ -1,0 +1,19 @@
+/* @font-face {
+    font-family: 'MyFont';
+    src: url('./Bahianita.tff');
+    font-weight: 600;
+    font-style: normal; 
+}
+*/
+
+.hello {
+    color: red;
+    /* 
+    loading fonts did not seem to work
+    font-family: 'MyFont'; 
+    */
+    /* 
+    webpack knows how to add this image to the bundle
+    background: url('./bench.jpg'); 
+    */
+} 

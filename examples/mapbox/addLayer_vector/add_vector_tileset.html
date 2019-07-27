@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Add a vector tile source</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2Ftc2FtbXVycGh5IiwiYSI6ImNqN2hkdmd0NDFoNGoyd28ycXNha2gwNngifQ.3m5UZyo8_nhxg-s2-tHe8Q';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v10',
+    zoom: 10,
+    center: [-94.87961221401193,42.06888691005008]
+    
+});
+
+map.on('load', function () {
+
+    2016
+
+    map.addLayer({
+        "id": "2016_iowa_maize",
+        "type": "fill",
+        "source": {
+            type: 'vector',
+            url: 'mapbox://samsammurphy.5cjo82qz'
+        },
+        "source-layer": "2016_iowa_maize-cr1ix5",
+        'layout': {},
+        'paint': {
+        'fill-color': 'yellow',
+        'fill-opacity': 0.8
+        }
+    });
+
+    map.addLayer({
+        "id": "2016_iowa_soybean",
+        "type": "fill",
+        "source": {
+            type: 'vector',
+            url: 'mapbox://samsammurphy.8zrpsc45'
+        },
+        "source-layer": "2016_iowa_soybeans-8h0af3",
+        'layout': {},
+        'paint': {
+        'fill-color': 'green',
+        'fill-opacity': 0.8
+        }
+    });
+
+    // 2017
+
+    // map.addLayer({
+    //     "id": "2017_iowa_maize",
+    //     "type": "fill",
+    //     "source": {
+    //         type: 'vector',
+    //         url: 'mapbox://samsammurphy.4s66fp1z'
+    //     },
+    //     "source-layer": "2017_iowa_maize-duty4i",
+    //     'layout': {},
+    //     'paint': {
+    //     'fill-color': 'yellow',
+    //     'fill-opacity': 0.8
+    //     }
+    // });
+
+    // map.addLayer({
+    //     "id": "2017_iowa_soybean",
+    //     "type": "fill",
+    //     "source": {
+    //         type: 'vector',
+    //         url: 'mapbox://samsammurphy.ad20q3ag'
+    //     },
+    //     "source-layer": "2017_iowa_soybeans-5457ca",
+    //     'layout': {},
+    //     'paint': {
+    //     'fill-color': 'green',
+    //     'fill-opacity': 0.8
+    //     }
+    // });
+
+    // 2018
+
+    // map.addLayer({
+    //     "id": "2018_iowa_maize",
+    //     "type": "fill",
+    //     "source": {
+    //         type: 'vector',
+    //         url: 'mapbox://samsammurphy.6yzjfebm'
+    //     },
+    //     "source-layer": "2018_iowa_maize-0s5uli",
+    //     'layout': {},
+    //     'paint': {
+    //     'fill-color': 'yellow',
+    //     'fill-opacity': 0.8
+    //     }
+    // });
+
+    // map.addLayer({
+    //     "id": "2018_iowa_soybean",
+    //     "type": "fill",
+    //     "source": {
+    //         type: 'vector',
+    //         url: 'mapbox://samsammurphy.c06e1g0a'
+    //     },
+    //     "source-layer": "2018_iowa_soybeans-3y2r4o",
+    //     'layout': {},
+    //     'paint': {
+    //     'fill-color': 'green',
+    //     'fill-opacity': 0.8
+    //     }
+    // });
+
+});
+</script>
+
+</body>
+</html>

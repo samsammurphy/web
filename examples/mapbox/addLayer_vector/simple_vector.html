@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Simple Polygon Display</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2Ftc2FtbXVycGh5IiwiYSI6ImNqN2hkdmd0NDFoNGoyd28ycXNha2gwNngifQ.3m5UZyo8_nhxg-s2-tHe8Q';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    zoom: 0
+});
+
+var url = 'https://s3.eu-west-2.amazonaws.com/hotvectors/map.geojson';
+
+map.on('load', function () {
+
+    // as a line
+    map.addLayer({
+        "id": "a_line",
+        "type": "line",
+        "source": { type: 'geojson', data: url}
+    });
+
+    // as a filled polygon
+    map.addLayer({
+        "id": "a_polygon",
+        "type": "fill",
+        "source": { type: 'geojson', data: url},
+        'paint': {'fill-color': '#088','fill-opacity': 0.8}
+    });
+});
+</script>
+
+</body>
+</html>

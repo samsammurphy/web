@@ -1,0 +1,43 @@
+<html>
+<head>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.css' rel='stylesheet' />
+
+  <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+
+</head>
+<body>
+
+<div id='map'></div>
+
+<script>
+
+  mapboxgl.accessToken = 'pk.eyJ1Ijoic2Ftc2FtbXVycGh5IiwiYSI6ImNqN2hkdmd0NDFoNGoyd28ycXNha2gwNngifQ.3m5UZyo8_nhxg-s2-tHe8Q';
+
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v10',
+    center: [-121.89940776139402, 36.46019193114426],
+    zoom: 14
+  });  
+
+  map.on('load', function() {
+    
+    map.addLayer({
+      id: 'raster-test',//some name
+      type: 'raster',// layer of type raster, yea mon (https://www.mapbox.com/mapbox-gl-js/style-spec/#layers)
+      source: {
+        type: 'raster',
+        url: 'mapbox://samsammurphy.atf44260'//mapid
+      }
+    });
+    
+  });
+</script>
+</body>
+
+</html>
+

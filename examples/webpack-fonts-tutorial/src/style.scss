@@ -1,0 +1,13 @@
+// import font-awesome css
+@import '~font-awesome/css/font-awesome.css';
+/*The ~ here means that rather than trying to locate a 
+file relative to our current file's location, locate a 
+ile relative to our project's node_modules directory 
+instead*/
+
+// import font family from Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:100,300,400");
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+  }

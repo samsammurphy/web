@@ -1,0 +1,32 @@
+GET http://localhost:3000/users
+
+###
+
+GET http://localhost:3000/users/5d3b139c49e0171d373b26ac
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "amazing person",
+    "subscribedToChannel":"web dev simplified"
+}
+
+###
+
+DELETE http://localhost:3000/users/5d3b3d7a6f29e72dfaa26f80
+
+###
+
+PATCH http://localhost:3000/users/5d3b3d1c6f29e72dfaa26f7f
+Content-Type: application/json
+
+
+{
+    "name": "sam",
+    "subscribedToChannel":"web dev simplified"
+}
+
+

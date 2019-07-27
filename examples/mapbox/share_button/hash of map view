@@ -1,0 +1,5 @@
+hash: true
+
+will append the map location onto the page's URL as a hash fragment (i.e. after #)
+
+DOM = window.location.hash

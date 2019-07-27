@@ -1,0 +1,5 @@
+{
+    // a preset is a collection of plugins for babel
+    // env is like 'latest'
+    "presets":["env"]
+}
