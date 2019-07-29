@@ -1,0 +1,32 @@
+GET http://localhost:3000/users
+
+###
+
+GET http://localhost:3000/users/5d3b3d1c6f29e72dfaa26f7f
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "sam",
+    "geo":"[1,1]"
+}
+
+###
+
+DELETE http://localhost:3000/users/5d3f18abdb716333287ac3e5
+
+###
+
+PATCH http://localhost:3000/users/5d3f17d8b682a329dd02c936
+Content-Type: application/json
+
+
+{
+    "name": "sam",
+    "geo":"[0,0]"
+}
+
+
