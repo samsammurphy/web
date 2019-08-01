@@ -1,22 +1,23 @@
 const express = require('express')
 const router = express.Router()
-const bcrypt = require('bcryptjs')
-
+const bcrypt = require('bcrypt')
+const passport = require('passport')
 // User model
 const User = require('../models/User')
 
-// Login page
-router.get('/login', (req, res) => {
-    res.render('login')
-})
 
 // Register page
 router.get('/register', (req, res) => {
     res.render('register')
 })
 
-// Register handle
-router.post('/register', (req, res) => {
+// Login page
+router.get('/login', (req, res) => {
+    res.render('login')
+})
+
+// Register handler
+router.post('/register', async (req, res) => {
     const { name, email, password, password2} = req.body
     let errors = []
 
@@ -35,9 +36,8 @@ router.post('/register', (req, res) => {
     //     errors.push({msg: 'Password should be at least 6 characters'})
     // }
 
-    // if there was an error
+    // error in registration form = keep existing variables
     if(errors.length > 0) {
-        // re-render register page but keep existing variables
         res.render('register', {
             errors,
             name,
@@ -45,37 +45,66 @@ router.post('/register', (req, res) => {
             password,
             password2
         });
-    // if form validation passed..
     } else {
-        User.findOne({"email":email})
-          .then(user => {
-              console.log('user',user)
-              if(user) {
-                // User exists
-                console.log('user exists')
-                errors.push({msg: 'Email is already registered'});
-                
-                res.render('register', {
-                    errors,
-                    name,
-                    email,
-                    password,
-                    password2
-                });
-              } else {
-                console.log('user does not exist')
-                const newUser = new User({
-                    name,
-                    email,
-                    password
-                });
 
-                console.log(newUser);
-                res.send('hello');
-              }
-          })
+    // form validation passed..
+    user = await User.findOne({"email":email})
+    
+    // user exists
+    if(user) {
+        errors.push({msg: 'Email is already registered'});
+        
+        res.render('register', {
+            errors,
+            name,
+            email,
+            password,
+            password2
+        });
+
+    // new user
+    } else {
+
+        try {
+            
+            const hashedPassword = await bcrypt.hash(req.body.password, 10)
+
+            const user = new User({
+                name,
+                email,
+                password:hashedPassword
+            });
+
+            const newUser = await user.save()
+            req.flash('success_msg', 'You are now registered and can login')
+            res.redirect('/users/login')
+
+        
+        } catch(err){
+            res.status(400).json({message: err.message})
+        }
+        
+        // res.send('hello');
+        }
     }
+});
 
+// Login Handler
+router.post('/login', (req, res, next) => {
+    passport.authenticate('local', {
+        successRedirect: '/dashboard',
+        failureRedirect: '/users/login',
+        failureFlash: true
+    })(req, res, next)
+})
+
+// Logout Handler
+router.get('/logout', (req, res) => {
+    // logout using passport middleware
+    req.logout();
+    // UI message
+    req.flash('success_msg', 'You are logged out');
+    res.redirect('/users/login')
 })
 
 module.exports = router
