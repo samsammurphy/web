@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Bootstrap Cheatsheet</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Bootstrap Cheatsheet</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- jumbotron -->
+
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h1>Welcome to My Website</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, repellendus? Magnam voluptatem eos illo consequuntur natus eum molestiae voluptate, nam provident non ipsa architecto ullam labore. In a blanditiis earum laboriosam, nobis rem praesentium alias molestiae impedit voluptatum sequi libero deleniti </p>
+            <a href="#" class='btn btn-primary'>Read More</a>
+        </div>
+    </div>
+
+    
+
+    <div class="container">
+
+        <!-- typography -->
+
+        <h2 class='page-header'>Hello, world! <small>Secondary text</small></h2>
+        <p class='lead'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, excepturi!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum beatae sed aperiam nam vel odio illum. Quos, ad exercitationem? Cupiditate, iusto. Voluptatibus labore et repudiandae id animi eligendi quia sed.</p>      
+
+        <hr>
+
+        <!-- alignment -->
+
+        <p class='text-left'>left align</p>
+        <p class='text-center'>center align</p>
+        <p class='text-right'>right align</p>
+        <p class='text-justify'>justify text</p>
+        <p class='text-nowrap'>no wrap</p>
+
+        <!-- quick floats -->
+
+        <div class='float-right'>Div floated to the right</div>
+        <div class='float-left'>Div floated to the left</div>
+        <!-- need to clear floats when done -->
+        <div class='clearfix'></div>
+
+        <hr>
+
+        <!-- blockquote -->
+
+        <blockquote class='blockquote'>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi animi maiores, exercitationem consectetur reprehenderit saepe explicabo voluptatem fugiat ipsa ut, nisi ipsum nostrum suscipit? Accusamus impedit autem laboriosam non nemo.</p>
+            <footer>Quote by <cite title='john doe'>John Doe</cite></footer>
+        </blockquote>
+
+        <hr>
+
+        <!-- lists -->
+
+        <ul class='list-unstyled'>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <ul class='list-inline'>
+            <li class="list-inline-item">Item 1</li>
+            <li class="list-inline-item">Item 2</li>
+            <li class="list-inline-item">Item 3</li>
+        </ul>
+
+        <!-- code -->
+
+        <code>&lt;h1&gt;Code&lt;/h1&gt;</code>
+        <br>
+        Change directory with <kbd>cd</kbd>
+        <br>
+        To edit settings, press <kbd>ctrl</kbd> + <kbd>,</kbd>
+
+        <hr>
+
+        <!-- contextual text colors -->
+
+        <p class='text-primary'>primary</p>
+        <p class='text-success'>success</p>
+        <p class='text-info'>info</p>
+        <p class='text-warning'>warning</p>
+        <p class='text-danger'>danger</p>
+        <p class='text-muted'>muted</p>
+
+
+        <!-- contextual background colors -->
+
+        <p class='bg-primary'>primary</p>
+        <p class='bg-success'>success</p>
+        <p class='bg-info'>info</p>
+        <p class='bg-warning'>warning</p>
+        <p class='bg-danger'>danger</p>
+        <p class='bg-muted'>muted</p>
+
+    </div>
+
+    <hr>
+
+    <div class="container">
+
+        <!-- buttons -->
+
+        <button class='btn btn-default'>button</button>
+        <a href="#" class='btn btn-default' role='button'>link</a>
+        <input type="submit" class='btn btn-default' value='Submit'>
+        <br>
+        <!-- contextual buttons -->
+
+        <button class='btn btn-default'>default</button>
+        <button class='btn btn-primary'>primary</button>
+        <button class='btn btn-success'>success</button>
+        <button class='btn btn-info'>info</button>
+        <button class='btn btn-warning'>warning</button>
+        <button class='btn btn-danger'>danger</button>
+        <button class='btn btn-link'>link</button>
+        <br>
+
+        <!-- button sizes -->
+        <button class='btn btn-default'>default</button>
+        <button class='btn btn-default btn-lg'>large</button>
+        <button class='btn btn-default btn-sm'>small</button>
+    </div>
+
+    <hr>
+
+    <div class="container">
+
+        <!-- forms -->
+
+        <form>
+            <div class="form-group">
+                <label>Name</label>
+                <input class='form-control' type="text" placeholder="Add Name">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input class='form-control' type="email" placeholder="Add Email">
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea class="form-control" placeholder="Add Message" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Geneder</label>
+                <select class='form-control'>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Upload File</label>
+                <input type="file" class='form-control'>
+                <p class='help-block'>Only png and jpg allowed</p>
+            </div>
+
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>
+
+            <button type='submit' class='btn btn-default'>Submit</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="container">
+
+        <!-- tables -->
+
+        <table class='table table-hover table-dark'>
+            <tr>
+                <th>FirstName</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jacksone</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>Sam</td>
+                <td>Murphy</td>
+                <td>47</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <div class="container">
+
+        <!-- list groups -->
+
+        <ul class=list-group>
+            <li class='list-group-item'>Item 1</li>
+            <li class='list-group-item'>Item 2</li>
+            <li class='list-group-item'>Item 3</li>
+            <li class='list-group-item'>Item 4</li>
+        </ul>
+
+        <hr>
+
+        <ul class=list-group>
+            <a href="#" class='list-group-item active'>Link 1</a>
+            <a href="#" class='list-group-item'>Link 2</a>
+            <a href="#" class='list-group-item'>Link 3</a>
+            <a href="#" class='list-group-item'>Link 4</a>
+        </ul>
+    </div>
+
+
+    <hr>
+
+    <div class="container">
+
+        <!-- alerts -->
+
+        <div class="alert alert-success">A success alert</div>
+        <div class="alert alert-info">An info alert</div>
+        <div class="alert alert-warning">A warning alert</div>
+        <div class="alert alert-danger">A danger alert</div>
+
+        <div class="alert alert-warning alert-dismissible">
+            <button type='button' class='close' data-dismiss='alert'><span>&times;</span></button>
+            You can close this alert
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="container">
+
+        <!-- progress bars -->
+
+        <div class="progress">
+            <div class="progress-bar" style='width:50%;'>
+                50%
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" style='width:60%;'>
+                60%
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="container">
+
+        <!-- badges -->
+
+        <a href="#">Inbox <span class='badge'>50</span></a>
+
+    </div>
+
+    <hr>
+
+    <!-- grids 
+    12 columns in a grid
+    -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestiae soluta ratione. Praesentium commodi, soluta corrupti molestias laudantium veritatis pariatur ut reprehenderit quo dolore explicabo placeat nesciunt eum nam earum.</p>
+            </div>
+            <div class="col-md-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestiae soluta ratione. Praesentium commodi, soluta corrupti molestias laudantium veritatis pariatur ut reprehenderit quo dolore explicabo placeat nesciunt eum nam earum.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestiae soluta ratione. Praesentium commodi, soluta corrupti molestias laudantium veritatis pariatur ut reprehenderit quo dolore explicabo placeat nesciunt eum nam earum.</p>
+            </div>
+            <div class="col-md-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestiae soluta ratione. Praesentium commodi, soluta corrupti molestias laudantium veritatis pariatur ut reprehenderit quo dolore explicabo placeat nesciunt eum nam earum.</p>
+            </div>
+            <div class="col-md-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestiae soluta ratione. Praesentium commodi, soluta corrupti molestias laudantium veritatis pariatur ut reprehenderit quo dolore explicabo placeat nesciunt eum nam earum.</p>
+            </div>
+            <div class="col-md-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestiae soluta ratione. Praesentium commodi, soluta corrupti molestias laudantium veritatis pariatur ut reprehenderit quo dolore explicabo placeat nesciunt eum nam earum.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestiae soluta ratione. Praesentium commodi, soluta corrupti molestias laudantium veritatis pariatur ut reprehenderit quo dolore explicabo placeat nesciunt eum nam earum.</p>
+            </div>
+            <div class="col-md-6">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestiae soluta ratione. Praesentium commodi, soluta corrupti molestias laudantium veritatis pariatur ut reprehenderit quo dolore explicabo placeat nesciunt eum nam earum.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div style='height:400px'></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
