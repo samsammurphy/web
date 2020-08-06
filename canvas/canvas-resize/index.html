@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas Resize</title>
+
+    <style>
+
+        canvas {
+            border: 1px solid black;
+            background: rgb(243, 183, 163);
+
+            /* html does not occupy entire screen by default
+               hence the following does not work, need to 
+               use javascript to fill the available space */
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding:0;
+        }
+
+        a {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+    <canvas></canvas>
+
+    <a href="https://www.youtube.com/watch?v=EO6OkltgudE">Source</a>
+
+    <script src="canvas.js"></script>
+</body>
+</html>
