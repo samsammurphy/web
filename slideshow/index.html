@@ -5,19 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- W3 CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <link rel="stylesheet" href="style.css">
+        
     <title>Slideshow</title>
 </head>
 
 <body>
+
+<div class="w3-content w3-display-container">
 
     <img class="mySlides" src="images/cyan.png">
     <img class="mySlides" src="images/magenta.png">
     <img class="mySlides" src="images/yellow.png">
     <img class="mySlides" src="images/black.png">
 
-    <button class="w3-button w3-display-left" onclick="changeSlide(-1)">&#10094;</button>
-    <button class="w3-button w3-display-right" onclick="changeSlide(+1)">&#10095;</button>
+
+    <button class="w3-button w3-black w3-display-left" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
 
 
     <script>
