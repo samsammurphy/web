@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Slideshow</title>
+</head>
+<body>
+
+<img class="mySlides" src="images/cyan.png">
+<img class="mySlides" src="images/magenta.png">
+<img class="mySlides" src="images/yellow.png">
+<img class="mySlides" src="images/black.png">
+
+<button class="w3-button w3-display-left" onclick="changeSlide(-1)">&#10094;</button>
+<button class="w3-button w3-display-right" onclick="changeSlide(+1)">&#10095;</button>
+
+
+<script>
+    // slide index variable
+    var slideIndex = 0;
+
+    // display first slide
+    displaySlide(slideIndex);
+
+    function displaySlide(next) {
+        
+        // find slide collection
+        var x = document.getElementsByClassName("mySlides");
+        
+        // slide index is cyclical
+        if (next > x.length - 1) { slideIndex = 0 }
+        if (next < 0) { slideIndex = x.length };
+        
+        // hide all slides
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+
+        // show target slide
+        x[slideIndex].style.display = "block";
+    }
+
+    // button click event listener
+        function changeSlide(increment) {
+            displaySlide(slideIndex += increment);
+        }
+</script>
+</body>
+</html>
